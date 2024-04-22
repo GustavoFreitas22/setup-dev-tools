@@ -1,7 +1,6 @@
 from time import sleep
 import threading
 import os
-import requests
 
 BASEDIR = "./dev_tools"
 SDKMAN_SCRIPT = 'curl "https://get.sdkman.io" | bash'
@@ -9,15 +8,8 @@ VPN_PACKAGES_APT_SCRIPT = 'sudo apt-get install network-manager-l2tp network-man
 INTELLIJ_SCRIPT = 'sudo snap install intellij-idea-community --classic'
 NVM_SCRIPT = 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
 DBEAVER_SCRIPT = 'sudo snap install dbeaver-ce'
-
 GO_SCRIPT_INSTALL = 'sudo snap install go --classic'
-
-VSCODE_REPO_GET_PACKAGES_01 = 'sudo apt-get install wget gpg wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg'
-VSCODE_REPO_GET_PACKAGES_02 = 'sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg'
-VSCODE_REPO_EXEC_SH = 'sudo sh -c `echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list`'
-VSCODE_RM_PACKAGES = 'rm -f packages.microsoft.gpg'
-
-VSCODE_INSTALL = 'sudo apt install apt-transport-https sudo apt update sudo apt install code'
+VSCODE_SCRIPT_INSTALL = 'sudo snap install code --classic'
 
 setup = False
 
@@ -41,11 +33,7 @@ def initSetup():
 
 def setupVSCode():
     try:
-        os.system(VSCODE_REPO_GET_PACKAGES_01)
-        os.system(VSCODE_REPO_GET_PACKAGES_02)
-        os.system(VSCODE_REPO_EXEC_SH)
-        os.system(VSCODE_RM_PACKAGES)
-        os.system(VSCODE_INSTALL)
+        os.system(VSCODE_SCRIPT_INSTALL)
         print('Visual Studio Code setup is success!')
     except SystemError:
         print("Error to setup Visual Studio Code")
