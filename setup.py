@@ -2,7 +2,6 @@ from time import sleep
 import threading
 import os
 
-BASEDIR = "./dev_tools"
 SDKMAN_SCRIPT = 'curl "https://get.sdkman.io" | bash'
 VPN_PACKAGES_APT_SCRIPT = 'sudo apt-get install network-manager-l2tp network-manager-l2tp-gnome apt-transport-https ca-certificates libreswan -y'
 INTELLIJ_SCRIPT = 'sudo snap install intellij-idea-community --classic'

@@ -4,7 +4,7 @@ Python script for installing develop tools automatically.
 
 ## How to use
 
-download a `setup.py` file and run using py3.
+download a `setup.py` file and run with `sudo` using py3.
 
 ## Develop tools list
 
