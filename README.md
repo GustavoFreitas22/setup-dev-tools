@@ -4,11 +4,11 @@ Python script for installing develop tools automatically.
 
 ## How to use
 
-clone a file `setup.py` and run using py3.
+download a `setup.py` file and run using py3.
 
 ## Develop tools list
 
-- IDE:
+- IDE & Text Editor:
   - VSCODE
   - Intellij community edition
 
@@ -21,6 +21,9 @@ clone a file `setup.py` and run using py3.
 
 - Databases manager:
   - Dbeaver community edition
+
+- VPN:
+  - Packages for L2TP connection
 
 ## Atention
 
